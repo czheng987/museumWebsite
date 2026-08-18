@@ -1,4 +1,22 @@
+:root {
+            --bg: #3b3b3b;
+            --surface: #3b3b3b;
+        }
+
+html, body {
+            margin: 0;
+            min-height: 200vh;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+        }
+
+<!--Navigation Bar-->
 .topbar-nav {
-    background-color: var(--bg-elevated);
+    background-color: var(--bg);
     color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px 14px;
 }
