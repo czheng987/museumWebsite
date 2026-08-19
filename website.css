@@ -1,5 +1,6 @@
 :root {
             --bg: #3b3b3b;
+            --bg-elevated: #1a1a1a;
             --surface: #3b3b3b;
         }
 
@@ -8,11 +9,12 @@ html, body {
             min-height: 200vh;
             overflow-y: scroll;
             scroll-behavior: smooth;
+            background-color: var(--bg);
         }
 
 <!--Navigation Bar-->
 .topbar-nav {
-    background-color: var(--bg);
+    background-color: var(--bg-elevated);
     color: #ffffff;
     display: flex;
     justify-content: center;
