@@ -12,13 +12,26 @@ html, body {
             background-color: var(--bg);
         }
 
-<!--Navigation Bar-->
+/* Navigation Bar */
 .topbar-nav {
     background-color: var(--bg-elevated);
     color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
-    padding: 0 20px 14px;
+    gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 64px;
+    padding: 12px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.topbar-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 16px;
 }
