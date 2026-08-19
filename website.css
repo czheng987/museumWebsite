@@ -12,6 +12,15 @@ html, body {
             background-color: #ffffff;
         }
 
+.searchbar {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .searchbar:hover {
+            background-color: #545454;
+        }
+
 /* Navigation Bar */
 .topbar-nav {
     background-color: #3b3b3b;
