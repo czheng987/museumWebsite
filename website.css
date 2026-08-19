@@ -40,17 +40,13 @@ a:hover {
 
 }
 
-
-/*
-I don't think this section is needed yet:
-
 .topbar-nav a[href="museumExhibits.html"],
 .topbar-nav a[href="collectionManagement.html"],
 .topbar-nav a[href="more.html"] {
     position: relative;
     display: inline-block;
 }
-    
+ /*Needed to add the drop down, only include the href that have dropdowns*/
 .topbar-nav a[href="museumExhibits.html"]::after,
 .topbar-nav a[href="collectionManagement.html"]::after,
 .topbar-nav a[href="more.html"]::after {
@@ -75,7 +71,6 @@ I don't think this section is needed yet:
     pointer-events: none;
     z-index: 101;
 }
-    */
 
     /*Added drop downs*/
 .topbar-nav a[href="museumExhibits.html"]::after {
