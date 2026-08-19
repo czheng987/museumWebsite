@@ -40,13 +40,17 @@ a:hover {
 
 }
 
+
+/*
+I don't think this section is needed yet:
+
 .topbar-nav a[href="museumExhibits.html"],
 .topbar-nav a[href="collectionManagement.html"],
 .topbar-nav a[href="more.html"] {
     position: relative;
     display: inline-block;
 }
-
+    
 .topbar-nav a[href="museumExhibits.html"]::after,
 .topbar-nav a[href="collectionManagement.html"]::after,
 .topbar-nav a[href="more.html"]::after {
@@ -71,7 +75,9 @@ a:hover {
     pointer-events: none;
     z-index: 101;
 }
+    */
 
+    /*Added drop downs*/
 .topbar-nav a[href="museumExhibits.html"]::after {
     content: "Permanent Galleries\ASpecial Exhibitions\ATours";
 }
@@ -90,3 +96,4 @@ a:hover {
     opacity: 1;
     visibility: visible;
 }
+/*End of the code that adds dropdowns*/
