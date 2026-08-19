@@ -46,6 +46,20 @@ a:hover {
     position: relative;
     display: inline-block;
 }
+
+ /* Hover bridge so the menu stays open while moving the pointer onto it */
+.topbar-nav a[href="museumExhibits.html"]::before,
+.topbar-nav a[href="collectionManagement.html"]::before,
+.topbar-nav a[href="more.html"]::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max(100%, 160px);
+    height: 20px;
+}
+
  /*Needed to add the drop down, only include the href that have dropdowns*/
 .topbar-nav a[href="museumExhibits.html"]::after,
 .topbar-nav a[href="collectionManagement.html"]::after,
@@ -61,7 +75,7 @@ a:hover {
     color: #ffffff;
     font-size: 14px;
     font-family: sans-serif;
-    line-height: 1.6;
+    line-height: 1.8;
     white-space: pre;
     text-align: left;
     border-radius: 4px;
@@ -70,6 +84,8 @@ a:hover {
     visibility: hidden;
     pointer-events: none;
     z-index: 101;
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+    transition-delay: 0.25s;
 }
 
     /*Added drop downs*/
@@ -86,9 +102,14 @@ a:hover {
 }
 
 .topbar-nav a[href="museumExhibits.html"]:hover::after,
+.topbar-nav a[href="museumExhibits.html"]:focus::after,
 .topbar-nav a[href="collectionManagement.html"]:hover::after,
-.topbar-nav a[href="more.html"]:hover::after {
+.topbar-nav a[href="collectionManagement.html"]:focus::after,
+.topbar-nav a[href="more.html"]:hover::after,
+.topbar-nav a[href="more.html"]:focus::after {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
 }
 /*End of the code that adds dropdowns*/
