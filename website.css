@@ -88,9 +88,9 @@ a:hover {
     line-height: 1.8;
     white-space: nowrap;
     text-align: left;
-    border-radius: 4px;
+    border-radius: 1px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    border: 1px solid #3b3b3b;
+    border-bottom: 2px solid #3b3b3b;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -103,15 +103,15 @@ a:hover {
 .topbar-nav a[href="museumExhibits.html"]::before,
 .topbar-nav a[href="more.html"]::before,
 .topbar-nav a[href="collectionManagement.html"]::after {
-    margin-top: 8px;
+    margin-top: 5px;
 }
 
 .topbar-nav a[href="museumExhibits.html"]::after,
 .topbar-nav a[href="more.html"]::after {
-    margin-top: 56px;
+    margin-top: 48px;
 }
 
-    /*Added drop downs*/
+    /*Added drop downs separately*/
 .topbar-nav a[href="museumExhibits.html"]::before {
     content: "Completed Projects";
 }
@@ -148,6 +148,9 @@ a:hover {
     pointer-events: auto;
     transition-delay: 0s;
 }
+
+
+
 /*End of the code that adds dropdowns*/
 
 .bottombar-nav {
