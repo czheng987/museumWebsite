@@ -57,67 +57,90 @@ a:hover {
 }
 
  /* Hover bridge so the menu stays open while moving the pointer onto it */
-.topbar-nav a[href="museumExhibits.html"]::before,
-.topbar-nav a[href="collectionManagement.html"]::before,
-.topbar-nav a[href="more.html"]::before {
+.topbar-nav a[href="collectionManagement.html"]::before {
     content: "";
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    width: max(100%, 160px);
+    width: max(100%, 180px);
     height: 20px;
 }
 
  /*Needed to add the drop down, only include the href that have dropdowns*/
+.topbar-nav a[href="museumExhibits.html"]::before,
 .topbar-nav a[href="museumExhibits.html"]::after,
 .topbar-nav a[href="collectionManagement.html"]::after,
+.topbar-nav a[href="more.html"]::before,
 .topbar-nav a[href="more.html"]::after {
     /*drop down boxes*/
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 8px;
     padding: 8px 12px;
-    min-width: 160px;
+    min-width: 180px;
+    box-sizing: border-box;
     background-color: var(--bg-elevated);
     color: #ffffff;
     font-size: 14px;
     font-family: sans-serif;
     line-height: 1.8;
-    white-space: pre;
+    white-space: nowrap;
     text-align: left;
     border-radius: 4px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    border: 1px solid #3b3b3b;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     z-index: 101;
-     border-bottom: 2px solid black; 
     /*makes the drop downs last longer than the hover time*/
     transition: opacity 0.13s ease, visibility 0.13s ease;
     transition-delay: 0.20s;
 }
 
+.topbar-nav a[href="museumExhibits.html"]::before,
+.topbar-nav a[href="more.html"]::before,
+.topbar-nav a[href="collectionManagement.html"]::after {
+    margin-top: 8px;
+}
+
+.topbar-nav a[href="museumExhibits.html"]::after,
+.topbar-nav a[href="more.html"]::after {
+    margin-top: 56px;
+}
+
     /*Added drop downs*/
+.topbar-nav a[href="museumExhibits.html"]::before {
+    content: "Completed Projects";
+}
+
 .topbar-nav a[href="museumExhibits.html"]::after {
-    content: "Completed Projects\AIn Progress Projects";
+    content: "In Progress Projects";
 }
 
 .topbar-nav a[href="collectionManagement.html"]::after {
     content: "Swansboro Heritage";
 }
 
+.topbar-nav a[href="more.html"]::before {
+    content: "Client List";
+}
+
 .topbar-nav a[href="more.html"]::after {
-    content: "Client List\00000AContact Me";
+    content: "Contact Me";
 }
 
 /*added hover focus*/
+.topbar-nav a[href="museumExhibits.html"]:hover::before,
+.topbar-nav a[href="museumExhibits.html"]:focus::before,
 .topbar-nav a[href="museumExhibits.html"]:hover::after,
 .topbar-nav a[href="museumExhibits.html"]:focus::after,
 .topbar-nav a[href="collectionManagement.html"]:hover::after,
 .topbar-nav a[href="collectionManagement.html"]:focus::after,
+.topbar-nav a[href="more.html"]:hover::before,
+.topbar-nav a[href="more.html"]:focus::before,
 .topbar-nav a[href="more.html"]:hover::after,
 .topbar-nav a[href="more.html"]:focus::after {
     opacity: 1;
