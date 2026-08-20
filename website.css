@@ -25,9 +25,9 @@ html, body {
 .topbar-nav {
     background-color: #3b3b3b;
     display: flex;
-    justify-content: center; /*For the x value of content*/
+    justify-content: right; /*For the x value of content*/
     align-items: center; /*For the y value of content*/
-    gap: 24px;
+    gap: 50px;
     width: 100%;
     box-sizing: border-box;
     min-height: 64px;
