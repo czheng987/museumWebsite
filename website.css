@@ -1,6 +1,6 @@
 :root {
             --bg: #3b3b3b;
-            --bg-elevated: #545454;
+            --bg-elevated: #837b7b;
             --surface: #3b3b3b;
         }
 
@@ -23,7 +23,7 @@ html, body {
 
 /* Navigation Bar */
 .topbar-nav {
-    background-color: #3b3b3b;
+    background-color: #714343;
     display: flex;
     justify-content: right; /*For the x value of content*/
     align-items: center; /*For the y value of content*/
@@ -73,6 +73,7 @@ a:hover {
 .topbar-nav a[href="museumExhibits.html"]::after,
 .topbar-nav a[href="collectionManagement.html"]::after,
 .topbar-nav a[href="more.html"]::after {
+    /*drop down boxes*/
     position: absolute;
     top: 100%;
     left: 50%;
@@ -93,6 +94,7 @@ a:hover {
     visibility: hidden;
     pointer-events: none;
     z-index: 101;
+     border-bottom: 2px solid black; 
     /*makes the drop downs last longer than the hover time*/
     transition: opacity 0.13s ease, visibility 0.13s ease;
     transition-delay: 0.20s;
@@ -126,7 +128,7 @@ a:hover {
 /*End of the code that adds dropdowns*/
 
 .bottombar-nav {
-    background-color: #3b3b3b;
+    background-color: #714343;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,10 +136,9 @@ a:hover {
     width: 100%;
     box-sizing: border-box;
     min-height: 64px;
-    position: fixed;
+    position: sticky;
     left: 0;
-    bottom: 0;
-    padding: 12px 15px 12px 15px;
+    top: 100%;
+    padding: 12px 15px 250px 15px;
     z-index: 100;
-    color: #ffffff;
 }
