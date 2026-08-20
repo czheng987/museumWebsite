@@ -108,7 +108,7 @@ a:hover {
 }
 
 .topbar-nav a[href="more.html"]::after {
-    content: "Client List\AContact Me";
+    content: "Client List\00000AContact Me";
 }
 
 /*added hover focus*/
