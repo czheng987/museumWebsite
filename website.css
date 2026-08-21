@@ -49,107 +49,55 @@ a:hover {
 
 }
 
-.topbar-nav a[href="museumExhibits.html"],
-.topbar-nav a[href="collectionManagement.html"],
-.topbar-nav a[href="more.html"] {
+.nav-dropdown {
     position: relative;
     display: inline-block;
 }
 
- /* Hover bridge so the menu stays open while moving the pointer onto it */
-.topbar-nav a[href="collectionManagement.html"]::before {
-    content: "";
+.dropdown-menu {
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    width: max(100%, 180px);
-    height: 20px;
-}
-
- /*Needed to add the drop down, only include the href that have dropdowns*/
-.topbar-nav a[href="museumExhibits.html"]::before,
-.topbar-nav a[href="museumExhibits.html"]::after,
-.topbar-nav a[href="collectionManagement.html"]::after,
-.topbar-nav a[href="more.html"]::before,
-.topbar-nav a[href="more.html"]::after {
-    /*drop down boxes*/
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding-top: 8px;
     min-width: 180px;
-    box-sizing: border-box;
-    background-color: var(--bg-elevated);
-    color: #ffffff;
-    font-size: 14px;
-    font-family: sans-serif;
-    line-height: 1.8;
-    white-space: nowrap;
-    text-align: left;
-    border-radius: 1px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    border-bottom: 2px solid #3b3b3b;
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
     z-index: 101;
     /*makes the drop downs last longer than the hover time*/
     transition: opacity 0.13s ease, visibility 0.13s ease;
     transition-delay: 0.20s;
 }
 
-.topbar-nav a[href="museumExhibits.html"]::before,
-.topbar-nav a[href="more.html"]::before,
-.topbar-nav a[href="collectionManagement.html"]::after {
-    margin-top: 5px;
-}
-
-.topbar-nav a[href="museumExhibits.html"]::after,
-.topbar-nav a[href="more.html"]::after {
-    margin-top: 48px;
-}
-
-    /*Added drop downs separately*/
-.topbar-nav a[href="museumExhibits.html"]::before {
-    content: "Completed Projects";
-}
-
-.topbar-nav a[href="museumExhibits.html"]::after {
-    content: "In Progress Projects";
-}
-
-.topbar-nav a[href="collectionManagement.html"]::after {
-    content: "Swansboro Heritage";
-}
-
-.topbar-nav a[href="more.html"]::before {
-    content: "Client List";
-}
-
-.topbar-nav a[href="more.html"]::after {
-    content: "Contact Me";
-}
-
-/*added hover focus*/
-.topbar-nav a[href="museumExhibits.html"]:hover::before,
-.topbar-nav a[href="museumExhibits.html"]:focus::before,
-.topbar-nav a[href="museumExhibits.html"]:hover::after,
-.topbar-nav a[href="museumExhibits.html"]:focus::after,
-.topbar-nav a[href="collectionManagement.html"]:hover::after,
-.topbar-nav a[href="collectionManagement.html"]:focus::after,
-.topbar-nav a[href="more.html"]:hover::before,
-.topbar-nav a[href="more.html"]:focus::before,
-.topbar-nav a[href="more.html"]:hover::after,
-.topbar-nav a[href="more.html"]:focus::after {
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
     opacity: 1;
     visibility: visible;
-    pointer-events: auto;
     transition-delay: 0s;
 }
 
+.dropdown-menu a {
+    background-color: var(--bg-elevated);
+    color: #ffffff;
+    font-size: 14px;
+    font-family: sans-serif;
+    padding: 8px 11px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-align: left;
+    border-radius: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    border-bottom: 2px solid #3b3b3b;
+}
 
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+    background-color: #545454;
+    color: #c8c4c4;
+}
 
 /*End of the code that adds dropdowns*/
 
