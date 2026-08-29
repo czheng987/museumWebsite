@@ -1,7 +1,7 @@
 :root {
-            --bg: #3b3b3b;
-            --bg-elevated: #837b7b;
-            --surface: #3b3b3b;
+            --bg: #2f4a4e;
+            --bg-elevated: #6a8583;
+            --surface: #2f4a4e;
         }
 
 html, body {
@@ -9,21 +9,21 @@ html, body {
             min-height: 200vh;
             overflow-y: scroll;
             scroll-behavior: smooth;
-            background-color: #ffffff;
+            background-color: #f3f1ec;
         }
 
 .searchbar {
-            background-color: #121212;
-            color: #ffffff;
+            background-color: #1c3336;
+            color: #f4f7f6;
         }
 
         .searchbar:hover {
-            background-color: #545454;
+            background-color: #4d6e6b;
         }
 
 /* Navigation Bar */
 .topbar-nav {
-    background-color: #714343;
+    background-color: #35575b;
     display: flex;
     justify-content: right; /*For the x value of content*/
     align-items: center; /*For the y value of content*/
@@ -38,14 +38,14 @@ html, body {
 }
 
 .topbar-nav a {
-    color: #ffffff;
+    color: #f4f7f6;
     text-decoration: none;
     font-family: sans-serif;
     font-size: 20px;
 }
 
 a:hover {
-    color: #b6b6b6;
+    color: #9bb5b2;
 
 }
 
@@ -81,7 +81,7 @@ a:hover {
 
 .dropdown-menu a {
     background-color: var(--bg-elevated);
-    color: #ffffff;
+    color: #f4f7f6;
     font-size: 14px;
     font-family: sans-serif;
     padding: 8px 11px;
@@ -89,20 +89,20 @@ a:hover {
     white-space: nowrap;
     text-align: left;
     border-radius: 1px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    border-bottom: 2px solid #3b3b3b;
+    box-shadow: 0 4px 10px rgba(28, 51, 54, 0.28);
+    border-bottom: 2px solid #2f4a4e;
 }
 
 .dropdown-menu a:hover,
 .dropdown-menu a:focus {
-    background-color: #545454;
-    color: #c8c4c4;
+    background-color: #4d6e6b;
+    color: #e6eeec;
 }
 
 /*End of the code that adds dropdowns*/
 
 .bottombar-nav {
-    background-color: #714343;
+    background-color: #35575b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +121,7 @@ a:hover {
 .introduction {
     font-family: sans-serif;
     font-size: 23px;
-    color: #000000;
+    color: #243436;
     text-align: center;
     padding: 20px 100px 20px 100px;
 }
