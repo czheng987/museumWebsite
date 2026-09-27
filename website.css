@@ -134,3 +134,11 @@ a:hover {
     color: #141818;
     text-align: center;
 }
+
+.headshot {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
