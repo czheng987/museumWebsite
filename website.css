@@ -122,10 +122,10 @@ a:hover {
 /*Introduction paragraph at MORE*/
 .introduction {
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 25px;
     color: #243436;
     text-align: left;
-    padding: 0 80px 40px 80px;
+    padding: 0 80px 40px 130px;
 }
 
 .heading {
@@ -140,7 +140,10 @@ a:hover {
     display: block;
     float: right;
     width: 300px;
-    margin: 0 80px 24px 40px;
+
+    /* First value is space above the image, second value is space to the right of the image, 
+    third value is space below the image, fourth value is space to the left of the image */
+    margin: 0 100px 24px 60px;
 }
 
 .headshot img {
@@ -149,3 +152,53 @@ a:hover {
     display: block;
     border-radius: 18px;
 }
+
+/*Buttons for MORE section*/
+.contactButton {
+    background-color: #35575b;
+    color: #f4f7f6;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+     margin-left: 220px;
+}
+
+.contactButton:hover {
+    background-color: #4d6e6b;
+    cursor: pointer;
+}
+
+.clientListButton {
+    background-color: #35575b;
+    color: #f4f7f6;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+     margin-left: 50px;
+}
+
+.clientListButton:hover {
+    background-color: #4d6e6b;
+    cursor: pointer;
+}
+
+.resumeButton {
+    background-color: #35575b;
+    color: #f4f7f6;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 50px; /* Add some space between the buttons */
+}
+
+.resumeButton:hover {
+    background-color: #4d6e6b;
+    cursor: pointer;
+}
+
