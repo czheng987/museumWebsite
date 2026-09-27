@@ -136,9 +136,14 @@ a:hover {
 }
 
 .headshot {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    display: block;
+    float: right;
+    width: 180px;
+    margin: 0 100px 16px 24px;
+}
+
+.headshot img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
