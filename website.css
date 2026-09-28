@@ -27,11 +27,11 @@ html, body {
     display: flex;
     justify-content: right; /*For the x value of content*/
     align-items: center; /*For the y value of content*/
-    gap: 24px;
+    gap: clamp(24px, 2.6vw, 50px);
     width: 100%;
     box-sizing: border-box;
     min-height: 64px;
-    padding: 12px 20px 12px 20px; /*added padding so it shifts to the left*/
+    padding: 12px clamp(20px, 8vw, 150px) 12px 20px; /*added padding so it shifts to the left*/
     position: sticky; /*Stays when scrolling*/
     top: 0;
     z-index: 100;
@@ -125,7 +125,7 @@ a:hover {
     font-size: 25px;
     color: #243436;
     text-align: center;
-    padding: 0 40px 40px 40px;
+    padding: 0 clamp(40px, 4vw, 80px) 40px clamp(40px, 7vw, 130px);
 }
 
 .heading {
@@ -133,7 +133,7 @@ a:hover {
     font-size: 42px;
     color: #141818;
     text-align: left;
-    padding: 40px 40px 12px 40px;
+    padding: 40px clamp(40px, 4vw, 80px) 12px clamp(40px, 21vw, 400px);
 }
 
 .headshot {
@@ -143,7 +143,7 @@ a:hover {
 
     /* First value is space above the image, second value is space to the right of the image, 
     third value is space below the image, fourth value is space to the left of the image */
-    margin: 0 40px 24px 24px;
+    margin: 0 clamp(24px, 5vw, 100px) 24px clamp(24px, 3vw, 60px);
 }
 
 .headshot img {
@@ -162,7 +162,7 @@ a:hover {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-     margin-left: 40px;
+     margin-left: clamp(40px, 21vw, 400px);
 }
 
 .contactButton:hover {
@@ -244,7 +244,7 @@ a:hover {
     font-size: 30px;
     color: #141818;
     text-align: left;
-    padding: 10px 40px 12px 40px;
+    padding: 10px clamp(40px, 4vw, 80px) 12px clamp(40px, 14vw, 270px);
 }
 
 .projectDescription {
@@ -252,5 +252,5 @@ a:hover {
     font-size: 25px;
     color: #243436;
     text-align: left;
-    padding: 10px 40px 12px 40px;
+    padding: 10px clamp(40px, 42vw, 800px) 12px clamp(40px, 4vw, 80px);
 }
