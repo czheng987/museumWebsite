@@ -6,8 +6,8 @@
 
 html, body {
             margin: 0;
-            min-height: auto;
-            overflow-y: auto;
+            min-height: 200vh;
+            overflow-y: scroll;
             scroll-behavior: smooth;
             background-color: #f3f1ec;
         }
@@ -110,10 +110,10 @@ a:hover {
     width: 100%;
     box-sizing: border-box;
     min-height: 64px;
-    position: relative;
+    position: sticky;
     left: 0;
-    top: auto;
-    padding: 12px 15px 12px 15px;
+    top: 100%;
+    padding: 12px 15px 250px 15px;
     z-index: 100;
 }
 
@@ -124,7 +124,7 @@ a:hover {
     font-family: sans-serif;
     font-size: 25px;
     color: #243436;
-    text-align: left;
+    text-align: center;
     padding: 0 80px 40px 130px;
 }
 
@@ -133,7 +133,7 @@ a:hover {
     font-size: 42px;
     color: #141818;
     text-align: left;
-    padding: 40px 80px 12px 80px;
+    padding: 40px 80px 12px 400px;
 }
 
 .headshot {
@@ -162,7 +162,7 @@ a:hover {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-     margin-left: 220px;
+     margin-left: 400px;
 }
 
 .contactButton:hover {
@@ -202,3 +202,55 @@ a:hover {
     cursor: pointer;
 }
 
+/*CLIENT SECTION*/
+.museums {
+    font-family: sans-serif;
+    font-size: 42px;
+    color: #141818;
+    text-align: center;
+    padding: 40px 80px 12px 80px;
+}
+
+.culturalInstitutions {
+    font-family: sans-serif;
+    font-size: 42px;
+    color: #141818;
+    text-align: center;
+    padding: 40px 80px 12px 80px;
+}
+
+/*SWANSBORO PROJECT SECTION*/
+.swansboroProject {
+    font-family: sans-serif;
+    font-size: 42px;
+    color: #141818;
+    text-align: center;
+    padding: 10px 80px 12px 80px;
+}
+
+.time {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #141818;
+
+    /* Moves the time closer to the project title */
+    margin-top: -40px;
+    text-align: center;
+    padding: 10px 80px 12px 80px;
+}
+
+.projectDescriptionTitle {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #141818;
+    text-align: left;
+    padding: 10px 80px 12px 270px;
+}
+
+.projectDescription {
+    font-family: sans-serif;
+    font-size: 25px;
+    color: #243436;
+    text-align: left;
+    padding: 10px 800px 12px 80px;
+}
