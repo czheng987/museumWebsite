@@ -10,7 +10,13 @@ html, body {
             overflow-y: scroll;
             scroll-behavior: smooth;
             background-color: #f3f1ec;
+            background-image: linear-gradient(180deg, #f7f4ee 0%, #f3f1ec 45%, #ece6dc 100%);
         }
+
+::selection {
+    background-color: #6a8583;
+    color: #f4f7f6;
+}
 
 .searchbar {
             background-color: #1c3336;
@@ -35,6 +41,8 @@ html, body {
     position: sticky; /*Stays when scrolling*/
     top: 0;
     z-index: 100;
+    border-bottom: 3px solid #c4b49a;
+    box-shadow: 0 4px 16px rgba(47, 74, 78, 0.18);
 }
 
 .topbar-nav a {
@@ -42,6 +50,8 @@ html, body {
     text-decoration: none;
     font-family: sans-serif;
     font-size: 20px;
+    letter-spacing: 0.04em;
+    transition: color 0.2s ease;
 }
 
 a:hover {
@@ -88,9 +98,10 @@ a:hover {
     box-sizing: border-box;
     white-space: nowrap;
     text-align: left;
-    border-radius: 1px;
+    border-radius: 4px;
     box-shadow: 0 4px 10px rgba(28, 51, 54, 0.28);
     border-bottom: 2px solid #2f4a4e;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .dropdown-menu a:hover,
@@ -115,6 +126,8 @@ a:hover {
     top: 100%;
     padding: 12px 15px 25px 15px;
     z-index: 100;
+    border-top: 3px solid #c4b49a;
+    box-shadow: 0 -4px 16px rgba(47, 74, 78, 0.12);
 }
 
 /*MORE SECTION*/
@@ -125,14 +138,16 @@ a:hover {
     font-size: 25px;
     color: #243436;
     text-align: center;
+    line-height: 1.55;
     padding: 0 clamp(40px, 4vw, 80px) 40px clamp(40px, 7vw, 130px);
 }
 
 .heading {
     font-family: sans-serif;
     font-size: 42px;
-    color: #141818;
+    color: #243e42;
     text-align: left;
+    letter-spacing: 0.03em;
     padding: 40px clamp(40px, 4vw, 80px) 12px clamp(40px, 21vw, 400px);
 }
 
@@ -151,6 +166,8 @@ a:hover {
     height: auto;
     display: block;
     border-radius: 18px;
+    border: 3px solid #e4d8c8;
+    box-shadow: 0 10px 28px rgba(47, 74, 78, 0.22);
 }
 
 /*Buttons for MORE section*/
@@ -163,11 +180,15 @@ a:hover {
     border: none;
     border-radius: 4px;
      margin-left: clamp(40px, 21vw, 400px);
+    letter-spacing: 0.03em;
+    box-shadow: 0 2px 8px rgba(47, 74, 78, 0.22);
+    transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 .contactButton:hover {
     background-color: #4d6e6b;
     cursor: pointer;
+    transform: translateY(-1px);
 }
 
 .clientListButton {
@@ -179,11 +200,15 @@ a:hover {
     border: none;
     border-radius: 4px;
      margin-left: 50px;
+    letter-spacing: 0.03em;
+    box-shadow: 0 2px 8px rgba(47, 74, 78, 0.22);
+    transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 .clientListButton:hover {
     background-color: #4d6e6b;
     cursor: pointer;
+    transform: translateY(-1px);
 }
 
 .resumeButton {
@@ -195,27 +220,33 @@ a:hover {
     border: none;
     border-radius: 4px;
     margin-left: 50px; /* Add some space between the buttons */
+    letter-spacing: 0.03em;
+    box-shadow: 0 2px 8px rgba(47, 74, 78, 0.22);
+    transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 .resumeButton:hover {
     background-color: #4d6e6b;
     cursor: pointer;
+    transform: translateY(-1px);
 }
 
 /*CLIENT SECTION*/
 .museums {
     font-family: sans-serif;
     font-size: 42px;
-    color: #141818;
+    color: #243e42;
     text-align: center;
+    letter-spacing: 0.03em;
     padding: 20px 80px 12px 80px;
 }
 
 .culturalInstitutions {
     font-family: sans-serif;
     font-size: 42px;
-    color: #141818;
+    color: #243e42;
     text-align: center;
+    letter-spacing: 0.03em;
     padding: 20px 80px 12px 80px;
 }
 
@@ -230,6 +261,8 @@ a:hover {
    width: auto;
     height: 250px;
     object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(47, 74, 78, 0.16);
 }
 
 .onslowCountyMuseum {
@@ -244,6 +277,8 @@ a:hover {
     width: 320px;
     height: 250px;
     object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(47, 74, 78, 0.16);
 }
 
 .USSMidwayMuseum {
@@ -256,6 +291,8 @@ a:hover {
     width: auto;
     height: 250px;
     object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(47, 74, 78, 0.16);
 }
 
 .carolinaMuseumOfTheMarine {
@@ -270,6 +307,8 @@ a:hover {
     width: 600px;
     height: 250px;
     object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(47, 74, 78, 0.16);
 }
 
 .swansboroHistoryImage {
@@ -277,33 +316,38 @@ a:hover {
     width: auto;
     height: 250px;
     object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(47, 74, 78, 0.16);
 }
 
 /*SWANSBORO PROJECT SECTION*/
 .swansboroProject {
     font-family: sans-serif;
     font-size: 42px;
-    color: #141818;
+    color: #243e42;
     text-align: center;
+    letter-spacing: 0.03em;
     padding: 10px 80px 12px 80px;
 }
 
 .time {
     font-family: sans-serif;
     font-size: 30px;
-    color: #141818;
+    color: #4d6e6b;
 
     /* Moves the time closer to the project title */
     margin-top: -40px;
     text-align: center;
+    font-style: italic;
     padding: 10px 80px 12px 80px;
 }
 
 .projectDescriptionTitle {
     font-family: sans-serif;
     font-size: 30px;
-    color: #141818;
+    color: #243e42;
     text-align: left;
+    letter-spacing: 0.02em;
     padding: 10px clamp(40px, 4vw, 80px) 12px clamp(40px, 14vw, 270px);
 }
 
@@ -312,6 +356,7 @@ a:hover {
     font-size: 25px;
     color: #243436;
     text-align: left;
+    line-height: 1.55;
     padding: 10px clamp(40px, 42vw, 800px) 12px clamp(40px, 4vw, 80px);
 }
 
@@ -319,8 +364,9 @@ a:hover {
 .homeHeading {
     font-family: sans-serif;
     font-size: 40px;
-    color: #141818;
+    color: #243e42;
     text-align: center;
+    letter-spacing: 0.03em;
     padding: 20px clamp(40px, 40vw, 300px) 0px clamp(40px, 21vw, 400px);
 }
 
@@ -329,6 +375,7 @@ a:hover {
     font-size: 25px;
     color: #243436;
     text-align: center;
+    line-height: 1.55;
     padding: 0 clamp(40px, 4vw, 300px) 40px clamp(40px, 7vw, 130px);
 }
 
@@ -336,8 +383,9 @@ a:hover {
 .contactMe {
     font-family: sans-serif;
     font-size: 40px;
-    color: #141818;
+    color: #243e42;
     text-align: center;
+    letter-spacing: 0.03em;
     padding: 20px clamp(40px, 40vw, 300px) 0px clamp(40px, 21vw, 400px);
 }
 
@@ -346,7 +394,38 @@ a:hover {
     font-size: 25px;
     color: #243436;
     text-align: center;
+    line-height: 1.55;
     padding: 0 clamp(40px, 4vw, 300px) 40px clamp(40px, 7vw, 130px);
+}
+
+label.name,
+label.email,
+label.message {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #2f4a4e;
+    display: block;
+    margin: 12px clamp(40px, 21vw, 400px) 6px;
+}
+
+.nameBox,
+.emailBox,
+.messageBox {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #243436;
+    background-color: #faf8f4;
+    border: 1px solid #6a8583;
+    border-radius: 4px;
+    padding: 10px 12px;
+    display: block;
+    margin: 0 clamp(40px, 21vw, 400px) 16px;
+    width: min(420px, 70%);
+    box-sizing: border-box;
+}
+
+.messageBox {
+    min-height: 120px;
 }
 
 /*BOTTOM NAVIGATION SECTION*/
@@ -354,18 +433,32 @@ a:hover {
 .instagram {
     width: 110px;
     height: auto;
+    transition: transform 0.2s ease;
 }
 
 .gmail {
     width: 150px;
     height: auto;
+    transition: transform 0.2s ease;
 }
 
 .linkedin {
     width: 140px;
     height: auto;
+    transition: transform 0.2s ease;
 }
 
+.instagram:hover,
+.gmail:hover,
+.linkedin:hover {
+    transform: scale(1.06);
+}
+
+h1 {
+    font-family: sans-serif;
+    color: #243e42;
+    letter-spacing: 0.03em;
+}
 .swansboroHeritage {
     background-color: #35575b;
     color: #f4f7f6;
@@ -375,9 +468,13 @@ a:hover {
     border: none;
     border-radius: 4px;
     margin-left: clamp(40px, 21vw, 400px);
+    letter-spacing: 0.03em;
+    box-shadow: 0 2px 8px rgba(47, 74, 78, 0.22);
+    transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 .swansboroHeritage:hover {
     background-color: #4d6e6b;
     cursor: pointer;
+    transform: translateY(-1px);
 }
