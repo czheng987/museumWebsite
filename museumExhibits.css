@@ -8,6 +8,8 @@ html, body {
             margin: 0;
             min-height: 200vh;
             overflow-y: scroll;
+            overflow-x: hidden;
+            max-width: 100%;
             scroll-behavior: smooth;
             background-color: #f3f1ec;
             background-image: linear-gradient(180deg, #f7f4ee 0%, #f3f1ec 45%, #ece6dc 100%);
@@ -33,11 +35,13 @@ html, body {
     display: flex;
     justify-content: right; /*For the x value of content*/
     align-items: center; /*For the y value of content*/
-    gap: clamp(24px, 2.6vw, 50px);
+    flex-wrap: wrap;
+    gap: clamp(12px, 2.6vw, 50px);
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     min-height: 64px;
-    padding: 12px clamp(20px, 8vw, 150px) 12px 20px; /*added padding so it shifts to the left*/
+    padding: 12px clamp(12px, 8vw, 150px) 12px 20px; /*added padding so it shifts to the left*/
     position: sticky; /*Stays when scrolling*/
     top: 0;
     z-index: 100;
@@ -49,7 +53,7 @@ html, body {
     color: #f4f7f6;
     text-decoration: none;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: clamp(14px, 2.2vw, 20px);
     letter-spacing: 0.04em;
     transition: color 0.2s ease;
 }
@@ -67,8 +71,9 @@ a:hover {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 0;
+    left: auto;
+    transform: none;
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -117,8 +122,10 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    flex-wrap: wrap;
+    gap: clamp(16px, 4vw, 50px);
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     min-height: 64px;
     position: sticky;
@@ -154,7 +161,8 @@ a:hover {
 .headshot {
     display: block;
     float: right;
-    width: 300px;
+    width: min(300px, 42vw);
+    max-width: 100%;
 
     /* First value is space above the image, second value is space to the right of the image, 
     third value is space below the image, fourth value is space to the left of the image */
@@ -238,7 +246,7 @@ a:hover {
     color: #243e42;
     text-align: center;
     letter-spacing: 0.03em;
-    padding: 20px 80px 12px 80px;
+    padding: 20px clamp(16px, 6vw, 80px) 12px clamp(16px, 6vw, 80px);
 }
 
 .culturalInstitutions {
@@ -247,75 +255,96 @@ a:hover {
     color: #243e42;
     text-align: center;
     letter-spacing: 0.03em;
-    padding: 20px 80px 12px 80px;
+    padding: 20px clamp(16px, 6vw, 80px) 12px clamp(16px, 6vw, 80px);
 }
 
 .historyMuseumOfCarteretCounty {
-    margin: 0px 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 12px;
     color: #ffffffff;
-    height: 250px;
-    width: 500px;
+    height: auto;
+    width: min(280px, calc(50% - 32px));
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .historyMuseumOfCarteretCountyImage {
-   width: auto;
-    height: 250px;
-    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+   width: 100%;
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain; /* Ensures the image covers the entire area without distortion */
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(47, 74, 78, 0.16);
 }
 
 .onslowCountyMuseum {
+    display: inline-block;
+    vertical-align: top;
     color: #ffffffff;
-    margin: -249px 520px; 
-    height: 250px;
-    width: 500px;
+    margin: 12px;
+    height: auto;
+    width: min(280px, calc(50% - 32px));
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .onslowCountryMuseumImage {
-    margin: 0px 50px; /* Centers the image horizontally */
-    width: 320px;
-    height: 250px;
-    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain; /* Ensures the image covers the entire area without distortion */
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(47, 74, 78, 0.16);
 }
 
 .USSMidwayMuseum {
-    margin: 0px 920px;
-
+    display: inline-block;
+    vertical-align: top;
+    margin: 12px;
+    width: min(280px, calc(50% - 32px));
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .USSMidwayMuseumImage {
-    margin: 0px 50px; /* Centers the image horizontally */
-    width: auto;
-    height: 250px;
-    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain; /* Ensures the image covers the entire area without distortion */
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(47, 74, 78, 0.16);
 }
 
 .carolinaMuseumOfTheMarine {
+    display: inline-block;
+    vertical-align: top;
     color: #ffffffff;
-    margin: 30px -65px; 
-    height: 250px;
-    width: 500px;
+    margin: 12px;
+    height: auto;
+    width: min(280px, calc(50% - 32px));
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .carolinaMuseumOfTheMarineImage {
-    margin: 0px 50px; /* Centers the image horizontally */
-    width: 600px;
-    height: 250px;
-    object-fit: cover; 
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain; 
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(47, 74, 78, 0.16);
 }
 
 .swansboroHistoryImage {
-    margin: 0px 165px;
-    width: auto;
-    height: 250px;
-    object-fit: cover; 
+    margin: 12px;
+    width: min(280px, calc(50% - 32px));
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain; 
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(47, 74, 78, 0.16);
 }
@@ -327,7 +356,7 @@ a:hover {
     color: #243e42;
     text-align: center;
     letter-spacing: 0.03em;
-    padding: 10px 80px 12px 80px;
+    padding: 10px clamp(16px, 6vw, 80px) 12px clamp(16px, 6vw, 80px);
 }
 
 .time {
@@ -339,7 +368,7 @@ a:hover {
     margin-top: -40px;
     text-align: center;
     font-style: italic;
-    padding: 10px 80px 12px 80px;
+    padding: 10px clamp(16px, 6vw, 80px) 12px clamp(16px, 6vw, 80px);
 }
 
 .projectDescriptionTitle {
@@ -431,19 +460,22 @@ label.message {
 /*BOTTOM NAVIGATION SECTION*/
 
 .instagram {
-    width: 110px;
+    width: min(110px, 22vw);
+    max-width: 100%;
     height: auto;
     transition: transform 0.2s ease;
 }
 
 .gmail {
-    width: 150px;
+    width: min(150px, 26vw);
+    max-width: 100%;
     height: auto;
     transition: transform 0.2s ease;
 }
 
 .linkedin {
-    width: 140px;
+    width: min(140px, 24vw);
+    max-width: 100%;
     height: auto;
     transition: transform 0.2s ease;
 }
