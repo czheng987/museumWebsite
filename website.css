@@ -113,7 +113,7 @@ a:hover {
     position: sticky;
     left: 0;
     top: 100%;
-    padding: 12px 15px 250px 15px;
+    padding: 12px 15px 25px 15px;
     z-index: 100;
 }
 
@@ -269,7 +269,14 @@ a:hover {
     margin: 0px 50px; /* Centers the image horizontally */
     width: 600px;
     height: 250px;
-    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    object-fit: cover; 
+}
+
+.swansboroHistoryImage {
+    margin: 0px 165px;
+    width: auto;
+    height: 250px;
+    object-fit: cover; 
 }
 
 /*SWANSBORO PROJECT SECTION*/
@@ -340,4 +347,21 @@ a:hover {
     color: #243436;
     text-align: center;
     padding: 0 clamp(40px, 4vw, 300px) 40px clamp(40px, 7vw, 130px);
+}
+
+/*BOTTOM NAVIGATION SECTION*/
+
+.instagram {
+    width: 110px;
+    height: auto;
+}
+
+.gmail {
+    width: 150px;
+    height: auto;
+}
+
+.linkedin {
+    width: 140px;
+    height: auto;
 }
