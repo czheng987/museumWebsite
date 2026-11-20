@@ -608,6 +608,71 @@ h1 {
     padding: 40px clamp(24px, 6vw, 80px);
 }
 
+.inProgressProjects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 24px 60px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.projectBox {
+    width: min(420px, calc(100% - 32px));
+    box-sizing: border-box;
+}
+
+.projectImage {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 3px solid #e4d8c8;
+    box-shadow: 0 10px 28px rgba(47, 74, 78, 0.22);
+    background-color: #faf8f4;
+}
+
+.projectImage img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.projectImage .layoutImage {
+    object-fit: contain;
+    background-color: #faf8f4;
+}
+
+.learnMore {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: #f4f7f6;
+    font-family: sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.projectImage:hover .learnMore,
+.projectImage:focus-within .learnMore {
+    opacity: 1;
+}
+
+.projectBoxDescription {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #243436;
+    line-height: 1.55;
+    text-align: center;
+    margin: 16px 8px 0;
+}
+
 
 .topbar-nav a:hover {
     color: #dceae8;
