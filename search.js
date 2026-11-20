@@ -1,3 +1,4 @@
+// search feature for the website
 (function () {
     var pages = [
         { title: "Home", href: "website.html", keywords: "home sarah williams museum consultant exhibit design collection management" },
