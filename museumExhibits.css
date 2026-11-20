@@ -23,19 +23,112 @@ html, body {
 }
 
 .searchbar {
-            background-color: #1c3336;
-            color: #f4f7f6;
-        }
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #1c3336;
+    color: #f4f7f6;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
 
-        .searchbar:hover {
-            background-color: #4d6e6b;
-        }
+.searchbar:hover,
+.searchbar:focus-within {
+    background-color: #4d6e6b;
+}
+
+.searchbar-input {
+    width: 0;
+    opacity: 0;
+    border: none;
+    background: transparent;
+    color: #f4f7f6;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding: 0;
+    min-width: 0;
+    outline: none;
+    transition: width 0.2s ease, opacity 0.2s ease, padding 0.2s ease;
+}
+
+.searchbar:focus-within .searchbar-input,
+.searchbar.is-open .searchbar-input {
+    width: min(180px, 42vw);
+    opacity: 1;
+    padding: 8px 10px;
+}
+
+.searchbar-input::placeholder {
+    color: #d5e4e2;
+}
+
+.searchbar-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    color: #f4f7f6;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.searchbar-button svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.search-results {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    z-index: 102;
+}
+
+.search-results[hidden] {
+    display: none;
+}
+
+.topbar-nav .search-results a,
+.search-empty {
+    background-color: var(--bg-elevated);
+    color: #f4f7f6;
+    font-size: 14px;
+    font-family: sans-serif;
+    letter-spacing: 0.02em;
+    padding: 10px 14px;
+    text-align: left;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(28, 51, 54, 0.28);
+    border-bottom: 2px solid #2f4a4e;
+    text-decoration: none;
+}
+
+.topbar-nav .search-results a:hover,
+.topbar-nav .search-results a:focus {
+    background-color: #4d6e6b;
+    color: #e6eeec;
+}
+
+.search-empty {
+    margin: 0;
+}
 
 /* Navigation Bar */
 .topbar-nav {
     background-color: #35575b;
     display: flex;
-    justify-content: right; /*For the x value of content*/
+    justify-content: flex-end; /*For the x value of content*/
     align-items: center; /*For the y value of content*/
     flex-wrap: wrap;
     gap: clamp(12px, 2.6vw, 50px);
@@ -43,12 +136,19 @@ html, body {
     max-width: 100%;
     box-sizing: border-box;
     min-height: 64px;
-    padding: 12px clamp(12px, 8vw, 150px) 12px 20px; /*added padding so it shifts to the left*/
+    padding: 12px 16px 12px 20px;
     position: sticky; /*Stays when scrolling*/
     top: 0;
     z-index: 100;
     border-bottom: 3px solid #c4b49a;
     box-shadow: 0 4px 16px rgba(47, 74, 78, 0.18);
+}
+
+.businessName {
+    margin-right: auto;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
 }
 
 .topbar-nav a {
@@ -89,7 +189,7 @@ a:hover {
     transition-delay: 0.20s;
 }
 
-.nav-dropdown:last-child .dropdown-menu {
+.more-dropdown .dropdown-menu {
     left: 0;
     right: auto;
 }
