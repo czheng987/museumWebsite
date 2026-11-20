@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Museum Consultant</title>
+        <link rel="stylesheet" href="website.css"> <!--connect css into html-->
+    </head>
+    <body>
+
+        <nav class="topbar-nav">
+            <a href="website.html" class="businessName">Museum Consultant</a>
+            <a href="website.html">Home</a>
+            <div class="nav-dropdown">
+                <!--separated each nav link-->
+                <a href="museumExhibits.html">Museum Exhibits</a>
+                <div class="dropdown-menu">
+                    <a href="completedProjects.html">Completed Projects</a>
+                    <a href="inProgressProjects.html">In Progress Projects</a>
+                </div>
+            </div>
+            <!--separated each nav link-->
+            <div class="nav-dropdown">
+                <a href="collectionManagement.html">Collection Management</a>
+                <div class="dropdown-menu">
+                    <a href="swansboroHeritage.html">Swansboro Heritage</a>
+                </div>
+            </div>
+            <!--separated each nav link-->
+            <div class="nav-dropdown more-dropdown">
+                <a href="more.html">More</a>
+                <div class="dropdown-menu">
+                    <a href="clientList.html">Client List</a>
+                    <a href="contactMe.html">Contact Me</a>
+                </div>
+            </div>
+            <form class="searchbar" role="search" action="#" method="get">
+                <input class="searchbar-input" type="search" name="q" placeholder="Search" aria-label="Search the site" autocomplete="off">
+                <button class="searchbar-button" type="button" aria-label="Search">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+                    </svg>
+                </button>
+                <div class="search-results" hidden></div>
+            </form>
+        </nav>
+        <h1 class="homeHeading">Sarah Williams:</h1>
+        <p class="homeParagraph">
+            I am an experienced museum professional with a strong foundation in exhibit design and collection management. My work includes developing and interpreting innovation exhibits that can engage and connect with diverse audiences. With nearly seven years of experience working with a variety of museums and cultural institutions, I bring a high level of insight, planning, and creativity to all projects. Additionally, I have extensive training in collection management, including accessioning, cataloging, and creating and implementing collection policies, plans, and procedures.
+        </p>
+        <nav class="bottombar-nav">
+            <img src="images/instaLogo.png" class="instagram" alt="Instagram">
+            <img src="images/GmailLogo.png" class="gmail" alt="Gmail">
+            <img src="images/linkedInLogo.png" class="linkedin" alt="LinkedIn">
+         </nav>
+        <script src="search.js"></script>
+    </body>
+
