@@ -618,6 +618,7 @@ h1 {
     max-width: 100%;
 }
 
+/*Project image boxes*/
 .projectBox {
     width: min(420px, calc(100% - 32px));
     box-sizing: border-box;
