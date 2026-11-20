@@ -126,7 +126,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: clamp(16px, 4vw, 50px);
+    gap: 22px;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -134,7 +134,7 @@ a:hover {
     position: sticky;
     left: 0;
     top: 100%;
-    padding: 12px 15px 25px 15px;
+    padding: 14px 15px;
     z-index: 100;
     border-top: 3px solid #c4b49a;
     box-shadow: 0 -4px 16px rgba(47, 74, 78, 0.12);
@@ -476,31 +476,23 @@ label.message {
 
 /*BOTTOM NAVIGATION SECTION*/
 
-.instagram {
-    width: min(110px, 22vw);
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.2s ease;
-}
-
-.gmail {
-    width: min(150px, 26vw);
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.2s ease;
-}
-
+.instagram,
+.gmail,
 .linkedin {
-    width: min(140px, 24vw);
+    width: 36px;
+    height: 36px;
     max-width: 100%;
-    height: auto;
-    transition: transform 0.2s ease;
+    object-fit: contain;
+    display: block;
+    border-radius: 6px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .instagram:hover,
 .gmail:hover,
 .linkedin:hover {
-    transform: scale(1.06);
+    opacity: 0.88;
+    transform: translateY(-1px);
 }
 
 h1 {
@@ -563,8 +555,4 @@ p.email a {
     text-underline-offset: 3px;
 }
 
-.instagram,
-.gmail,
-.linkedin {
-    border-radius: 8px;
-}
+
