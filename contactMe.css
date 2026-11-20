@@ -549,34 +549,77 @@ a:hover {
     padding: 0 clamp(40px, 4vw, 300px) 40px clamp(40px, 7vw, 130px);
 }
 
-label.name,
-label.email,
-label.message {
+.contactForm {
+    width: min(640px, calc(100% - 48px));
+    margin: 0 auto 24px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.fieldHeading {
     font-family: sans-serif;
-    font-size: 18px;
-    color: #2f4a4e;
+    font-size: 20px;
+    font-weight: 600;
+    color: #243436;
+    margin: 0 0 12px;
+}
+
+.nameRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.nameRow .field {
+    flex: 1 1 200px;
+    margin-bottom: 0;
+}
+
+.field {
+    margin: 0 0 16px;
+}
+
+.contactForm label {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #243436;
     display: block;
-    margin: 12px clamp(40px, 21vw, 400px) 6px;
+    margin: 0 0 6px;
+}
+
+.required {
+    color: #8a8a8a;
+    font-weight: 400;
 }
 
 .nameBox,
 .emailBox,
-.messageBox {
+.messageBox,
+.foundMeBox {
     font-family: sans-serif;
     font-size: 16px;
     color: #243436;
-    background-color: #faf8f4;
-    border: 1px solid #6a8583;
-    border-radius: 4px;
+    background-color: #f3f3f3;
+    border: 1px solid #c8c8c8;
+    border-radius: 2px;
     padding: 10px 12px;
     display: block;
-    margin: 0 clamp(40px, 21vw, 400px) 16px;
-    width: min(420px, 70%);
+    margin: 0;
+    width: 100%;
     box-sizing: border-box;
+    min-height: 44px;
 }
 
-.messageBox {
-    min-height: 120px;
+.messageBox,
+.foundMeBox {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.contactForm .submitButton {
+    margin-left: 0;
+    margin-top: 8px;
 }
 
 /*BOTTOM NAVIGATION SECTION*/
@@ -662,16 +705,19 @@ h1 {
 
 .nameBox:focus,
 .emailBox:focus,
-.messageBox:focus {
+.messageBox:focus,
+.foundMeBox:focus {
     outline: none;
     border-color: #35575b;
     box-shadow: 0 0 0 3px rgba(53, 87, 91, 0.22);
 }
 
-.nameBox::placeholder,
-.emailBox::placeholder,
-.messageBox::placeholder {
-    color: #7d8f8c;
+p.email {
+    width: min(640px, calc(100% - 48px));
+    margin: 0 auto 40px;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #243436;
 }
 
 p.email a {
